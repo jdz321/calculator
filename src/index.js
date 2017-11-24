@@ -10,8 +10,11 @@ const app = dva()
 // 3. Model
 app.model(require('@models/example'))
 
-// 4. Router
-app.router(require('./router'))
+const getRouter = window.isMobil ? import(/* webpackChunkName: 'm' */'./router-m') : import(/* webpackChunkName: 'pc' */'./router')
 
-// 5. Start
-app.start('#root')
+getRouter.then((router) => {
+  // 4. Router
+  app.router(router)
+  // 5. Start
+  app.start('#root')
+})

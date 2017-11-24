@@ -1,13 +1,13 @@
 import React from 'react'
 import { Router, Route } from 'dva/router'
-import IndexPage from './routes/index-page'
+import P2p from './routes-m/p2p'
 
-console.log('i am pc')
+console.log('i am mobil')
 
 function RouterConfig({ history }) {
   return (
     <Router history={history}>
-      <Route path="/" component={IndexPage} />
+      <Route path="/" component={P2p} />
     </Router>
   )
 }

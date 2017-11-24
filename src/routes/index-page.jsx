@@ -1,5 +1,6 @@
 import React from 'react'
 import { connect } from 'dva'
+import { Button } from 'antd'
 import styles from './index-page.less'
 
 function IndexPage() {
@@ -8,6 +9,7 @@ function IndexPage() {
       <h1 className={styles.title}>Yay! Welcome to Janna!</h1>
       <div className={styles.welcome} />
       <ul className={styles.list}>
+        <Button>123</Button>
         <li>To get started, edit <code>src/index.js</code> and save to reload.</li>
         <li><a target="_blank" href="http://groups.alidemo.cn/falcon/seller-center-universal/dist/#/introduce/quick-start">Getting Started</a></li>
       </ul>
